@@ -1,0 +1,30 @@
+#maze {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: auto;
+}
+.normal {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(235, 235, 235);
+    border: 0.5px solid rgb(211, 208, 203)
+}
+#buttons {
+    margin: 10px auto;
+    align-content: center;
+    text-align: center;
+}
+.obstacle {
+    background-color: rgb(31, 30, 28);
+}
+.last {
+    background-color: rgb(238, 130, 111);
+}
+#paths {
+    padding-top: 20px;
+    margin: 10px auto;
+    align-content: center;
+    text-align: center;
+}
