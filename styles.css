@@ -14,7 +14,7 @@ body {
     background-color: rgb(235, 235, 235);
     border: 0.5px solid rgb(211, 208, 203)
 }
-#buttons {
+.buttons {
     margin: 10px auto;
     align-content: center;
     text-align: center;
@@ -31,12 +31,9 @@ body {
 .found-last {
     background-color: royalblue;
 }
-#paths {
-    padding-top: 20px;
-    margin: 10px auto;
-    align-content: center;
-    text-align: center;
-}
 h1 {
     text-align: center;
+}
+.final-path {
+  background-color: yellow;
 }

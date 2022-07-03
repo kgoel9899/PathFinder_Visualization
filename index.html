@@ -6,18 +6,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>Flood Fill</title>
+    <title>Path Finder</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="index.js" defer></script>
 </head>
 <body>
-    <h1> Welcome to the Flood Fill Visualization!! </h1>
-    <div id="maze"></div>
-    <div id="buttons">
-      <button class="btn btn-success" id="starting" onclick="start()">Start Algorithm</button>
+    <h1> Welcome to the Path Finder Visualizer! </h1>
+    <div class="buttons">
+      <button id="dfs" class="btn btn-primary" onclick="dfs()">Depth First Search</button>
+      <button id="bfs" class="btn btn-primary" onclick="bfs()">Breadth First Search</button>
     </div>
-    <div id="paths">
-        <h3>Paths:</h3>
+    <div id="maze"></div>
+    <div class="buttons">
+      <button class="btn btn-warning" onclick="original()">Clear Board</button>
     </div>
 </body>
 </html>
