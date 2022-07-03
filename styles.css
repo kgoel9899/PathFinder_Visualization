@@ -1,3 +1,6 @@
+body {
+    background-color: rgb(123, 247, 255);
+}
 #maze {
     padding-top: 20px;
     display: flex;
@@ -32,5 +35,8 @@
     padding-top: 20px;
     margin: 10px auto;
     align-content: center;
+    text-align: center;
+}
+h1 {
     text-align: center;
 }

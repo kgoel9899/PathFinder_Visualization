@@ -45,37 +45,37 @@ async function start() {
       vis[i][j] = 0;
     }
   }
-  await path(0, 0, "");
+  await path(0, 0, "", -1);
   butn.innerHTML = "Start Algorithm";
   butn.disabled = false;
 }
-// let allPaths = document.getElementById("paths");
-async function path(r, c, ans) {
+let allPaths = document.getElementById("paths");
+async function path(r, c, ans, call) {
   if(r >= m || c >= n || r < 0 || c < 0 || vis[r][c] === 1 || maze[r][c] === 1) {
     return;
   }
   if(r === m - 1 && c === n - 1) {
     console.log(ans);
-    // let newPara = document.createElement("p");
-    // newPara.innerText = ans;
-    // allPaths.appendChild(newPara);
+    let newPara = document.createElement("p");
+    newPara.innerText = ans;
+    newPara.style.fontSize = "20px";
+    allPaths.appendChild(newPara);
     let newVis = document.getElementById("b" + r + c);
     newVis.classList.add("found-last");
-    await delay(300);
+    await delay(500);
     newVis.classList.remove("found-last");
     return;
   }
   let newVis = document.getElementById("b" + r + c);
-  console.log(newVis);
   newVis.classList.add("visited");
-  await delay(300);
+  await delay(3);
   vis[r][c] = 1;
-  path(r + 1, c, ans + "D");
-  path(r - 1, c, ans + "U");
-  path(r, c + 1, ans + "R");
-  path(r, c - 1, ans + "L");
+  await path(r + 1, c, ans + "D", 1);
+  await path(r - 1, c, ans + "U", 2);
+  await path(r, c + 1, ans + "R", 3);
+  await path(r, c - 1, ans + "L", 4);
   vis[r][c] = 0;
   newVis.classList.remove("visited");
-  await delay(300);
+  await delay(3);
 }
 const delay = ms => new Promise(res => setTimeout(res, ms));
